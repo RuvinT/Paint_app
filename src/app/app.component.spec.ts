@@ -33,3 +33,5 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('h1').textContent).toContain('Welcome to paint-app!');
   });
 });
+
+

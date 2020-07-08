@@ -9,6 +9,10 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "styles": [
+    "node_modules/bootstrap/dist/css/bootstrap.min.css",
+    "styles.css"
+  ],
   "private": true,
   "dependencies": {
     "@angular/animations": "~7.1.0",
@@ -19,7 +23,12 @@
     "@angular/platform-browser": "~7.1.0",
     "@angular/platform-browser-dynamic": "~7.1.0",
     "@angular/router": "~7.1.0",
+    "bootstrap": "^4.5.0",
+    "canvas": "^2.6.1",
     "core-js": "^2.5.4",
+    "jquery": "^3.5.1",
+    "konva": "^6.0.0",
+    "ng2-konva": "^6.0.0",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
@@ -44,5 +53,17 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.1.6"
-  }
+  },
+  "build": {
+    
+    "options": {
+      
+      "styles": [
+        "src/styles.css","node_modules/bootstrap/dist/css/bootstrap.min.css"
+
+      ],
+      "scripts": ["node_modules/jquery/dist/jquery.min.js",
+                 "node_modules/bootstrap/dist/js/bootstrap.min.js"]
+    }
+}
 }
